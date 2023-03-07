@@ -63,3 +63,17 @@ boutonAppartements.addEventListener("click", () => {
     document.querySelector(".gallery").innerHTML = "";
     fetchProjets(projetsFiltreesAppartements);
 });
+
+const boutonHotelsRestaurants = document.getElementById('btn-filtrer-hotels-restaurants');
+
+boutonHotelsRestaurants.addEventListener("click", () => {
+    const projetsFiltreesHotelsRestaurants = works.filter((work) => {
+        if (work.category.name == "Hotels & restaurants") {
+            return true;
+        } 
+        return false;
+    });
+    document.querySelector(".gallery").innerHTML = "";
+    fetchProjets(projetsFiltreesHotelsRestaurants);
+});
+
